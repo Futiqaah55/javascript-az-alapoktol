@@ -5,6 +5,23 @@ le róla azt.
 */
 
 /*
+ - element  JS reprezentácioja: document.getElementById('element-one')
+ - esemény kiválasztása: onclick
+ - funkcionalitás leirása: function () {...}
+/*
+
+// belső állapot: state
+
+var isBlurred = false;
+
+document.getElementById('element-one').onclick = function () {document.getElementById('element-one').classList.toggle('blur')};
+isBlurred = !isBlurred;
+if(isBlurred) {console.dir(document.getElementById('element-one'));} else {document.getElementById('element-one').classList.remove('blur')};
+
+
+
+
+
 2. doboz:
 Ha az egérrel fölé megyünk változzon meg a háttérszíne pirosra, ha levesszük róla az egeret
 változzon vissza az eredeti színére.
