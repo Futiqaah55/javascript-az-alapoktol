@@ -95,23 +95,36 @@ document.getElementById('element-five').onclick = function () {
 Form submit eseményre módosítsuk a doboz tartalmát az input mezőbe írt értékkel
 */
 
-
-
-
-
-
+document.getElementById('box-6').onsubmit = function (event) {
+  event.preventDefault(); // Megakadályozzuk az alapértelmezett form submit viselkedést
+  var inputValue = document.getElementById('input-6').value; // Lekérjük az input mező értékét
+  document.getElementById('box-6').firstElementChild.innerHTML = inputValue; // Beírjuk a dobozba
+}  
 
 /*
 7. doboz:
 Keypress eseményre írjuk be a dobozba az adott karaktert, amit leütöttek
 */
 
+document.getElementById('box-7-input').onkeypress = function (event) {
+  var character = event.key; // Lekérjük a leütött karaktert
+  document.getElementById('box-7').firstElementChild.innerHTML += character; // Hozzáadjuk a doboz tartalmához
+}
 
 /*
 8. doboz:
 Egérmozdítás eseményre írjuk be az egér pozíciójának x és y koordinátáját, 
 a következő séma szerint: "X: {x-koordináta}, Y: {y-koordináta}"
 */
+
+document.onmousemove = function (event) {
+ var coordinataer = "X: "+event.clientX+", Y: "+event.clientY;
+ document.getElementById('box-8').firstElementChild.innerHTML = coordinataer; // Beírjuk a dobozba
+}
+
+
+
+
 
 
 /*
